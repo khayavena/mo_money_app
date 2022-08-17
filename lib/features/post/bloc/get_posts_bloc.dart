@@ -1,8 +1,7 @@
-import 'package:bidvest_business_banking_app/features/post/bloc/get_posts_event.dart';
-import 'package:bidvest_business_banking_app/features/post/bloc/get_posts_state.dart';
-import 'package:bidvest_business_banking_app/features/post/bloc/result_status.dart';
+import 'package:business_banking_app/features/post/bloc/get_posts_event.dart';
+import 'package:business_banking_app/features/post/bloc/get_posts_state.dart';
+import 'package:business_banking_app/features/post/bloc/result_status.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 import '../repository/post_repository.dart';
 

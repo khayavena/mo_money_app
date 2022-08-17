@@ -1,5 +1,5 @@
-import 'package:bidvest_business_banking_app/features/post/model/post.dart';
-import 'package:bidvest_business_banking_app/features/post/remote_data/remote_post_service.dart';
+import 'package:business_banking_app/features/post/model/post.dart';
+import 'package:business_banking_app/features/post/remote_data/remote_post_service.dart';
 
 import '../../../http_delegate/http_req_delegate.dart';
 

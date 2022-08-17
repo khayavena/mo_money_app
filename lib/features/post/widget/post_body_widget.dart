@@ -1,4 +1,4 @@
-import 'package:bidvest_business_banking_app/features/post/widget/posts_list_view_widget.dart';
+import 'package:business_banking_app/features/post/widget/posts_list_view_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared_components/widget/loader/app_loading_widget.dart';

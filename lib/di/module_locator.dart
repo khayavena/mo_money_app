@@ -1,5 +1,5 @@
-import 'package:bidvest_business_banking_app/env/env_config.dart';
-import 'package:bidvest_business_banking_app/http_delegate/dio_client.dart';
+import 'package:business_banking_app/env/env_config.dart';
+import 'package:business_banking_app/http_delegate/dio_client.dart';
 import 'package:get_it/get_it.dart';
 
 import '../features/post/remote_data/remote_post_service.dart';
