@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bidvest.bidvest_business_banking_app">
+    package="com.bidvest.business_banking_app">
    <application
         android:label="Bidvest Business Banking "
         android:name="${applicationName}"

@@ -1,4 +1,4 @@
-# bidvest_business_banking_app
+# business_banking_app
 
 A new Flutter project.
 

@@ -1,4 +1,4 @@
-import 'package:bidvest_business_banking_app/di/module_locator.dart';
+import 'package:business_banking_app/di/module_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

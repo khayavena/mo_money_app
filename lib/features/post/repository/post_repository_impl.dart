@@ -1,4 +1,4 @@
-import 'package:bidvest_business_banking_app/features/post/repository/post_repository.dart';
+import 'package:business_banking_app/features/post/repository/post_repository.dart';
 
 import '../../../http_delegate/http_delegate_exception.dart';
 import '../../../http_delegate/http_delegate_general_exception.dart';

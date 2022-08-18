@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:bidvest_business_banking_app/shared_components/widget/loader/dot_type.dart';
+import 'package:business_banking_app/shared_components/widget/loader/dot_type.dart';
 import 'package:flutter/material.dart';
 
 

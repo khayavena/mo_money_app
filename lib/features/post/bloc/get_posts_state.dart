@@ -1,4 +1,4 @@
-import 'package:bidvest_business_banking_app/features/post/bloc/result_status.dart';
+import 'package:business_banking_app/features/post/bloc/result_status.dart';
 
 import '../model/post.dart';
 
