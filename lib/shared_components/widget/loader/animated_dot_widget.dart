@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:business_banking_app/shared_components/widget/loader/dot_type.dart';
 import 'package:flutter/material.dart';
-
+import 'package:mo_money_app/shared_components/widget/loader/dot_type.dart';
 
 class AnimatedDotWidget extends StatelessWidget {
   final double radius;

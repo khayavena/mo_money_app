@@ -9,7 +9,7 @@ class HttpDelegateException extends Error {
 
   void _process(DioError error) {
     switch (error.type) {
-      case DioErrorType.connectTimeout:
+      case DioErrorType.connectionTimeout:
         message = 'Connection timeout try again';
         break;
       case DioErrorType.sendTimeout:
@@ -18,7 +18,7 @@ class HttpDelegateException extends Error {
       case DioErrorType.receiveTimeout:
         message = 'Timeout could not receive data';
         break;
-      case DioErrorType.response:
+      case DioErrorType.badResponse:
         switch (error.response?.statusCode) {
           case 500:
             message = 'Internal Server Error';
@@ -34,7 +34,7 @@ class HttpDelegateException extends Error {
       case DioErrorType.cancel:
         message = 'Canceled Request';
         break;
-      case DioErrorType.other:
+      case DioErrorType.unknown:
         message = 'Something went wrong';
         break;
     }

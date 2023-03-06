@@ -1,6 +1,7 @@
-import 'package:business_banking_app/shared_components/widget/loader/dot_type.dart';
 import 'package:flutter/material.dart';
+import 'package:mo_money_app/shared_components/widget/loader/dot_type.dart';
 
+import '../../util/cusmtom_colors.dart';
 import 'animated_dot_widget.dart';
 
 class AppLoadingWidget extends StatefulWidget {
@@ -9,17 +10,18 @@ class AppLoadingWidget extends StatefulWidget {
   final Color dotThreeColor;
   final Duration duration;
   final DotType dotType;
-  final Icon dotIcon;
 
   const AppLoadingWidget(
       {Key key = const Key('appLoadingWidget'),
-      this.dotOneColor = Colors.redAccent,
-      this.dotTwoColor = Colors.green,
-      this.dotThreeColor = Colors.blueAccent,
+      this.dotOneColor = secondaryColor,
+      this.dotTwoColor = tertiaryColor,
+      this.dotThreeColor = secondaryColorDark,
       this.duration = const Duration(milliseconds: 1000),
       this.dotType = DotType.diamond,
       this.dotIcon = const Icon(Icons.blur_on)})
       : super(key: key);
+
+  final Icon dotIcon;
 
   @override
   State<StatefulWidget> createState() {

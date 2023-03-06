@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  },
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  },
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  },
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  },
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  },
+  {
+    "name": "Netflix",
+    "description": "Monthly Subscription",
+    "icon": "assets/home/netflix.svg",
+    "amount": 20000
+  },
+  {
+    "name": "Paypal",
+    "description": "External payment",
+    "icon": "assets/home/paypal.svg",
+    "amount": 43465
+  },
+  {
+    "name": "Multiply Online Shop",
+    "description": "General",
+    "icon": "assets/home/multiply.svg",
+    "amount": 24500
+  }
+]
