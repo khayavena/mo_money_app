@@ -8,36 +8,31 @@ import '../features/login/repository/login_repository.dart';
 import '../features/main/auth_route_gaurd.dart';
 import '../features/main/main_app.dart';
 import '../features/main/router.gr.dart';
-import '../features/messages/repository/message_repository.dart';
 import '../features/transactions/bloc/get_transactions_bloc.dart';
-import '../features/transactions/repository/transaction_repository.dart';
 import 'module_locator.dart';
 
 Future<void> provideMainApp() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initRemoteDataModules();
+  await configureDependencies();
   runApp(
     MultiBlocProvider(
       providers: [
         BlocProvider<GetTransactionsBloc>(
           lazy: true,
-          create: (BuildContext context) => GetTransactionsBloc(
-              repository: moduleLocator<TransactionRepository>()),
+          create: (BuildContext context) =>
+              moduleLocator<GetTransactionsBloc>(),
         ),
         BlocProvider<GetMessagesBloc>(
           lazy: true,
-          create: (BuildContext context) =>
-              GetMessagesBloc(repository: moduleLocator<MessageRepository>()),
+          create: (BuildContext context) => moduleLocator<GetMessagesBloc>(),
         ),
         BlocProvider<GetLoginBloc>(
           lazy: true,
-          create: (BuildContext context) =>
-              GetLoginBloc(repository: moduleLocator<LoginRepository>()),
+          create: (BuildContext context) => moduleLocator<GetLoginBloc>(),
         ),
         BlocProvider<GetProfileBloc>(
           lazy: true,
-          create: (BuildContext context) =>
-              GetProfileBloc(repository: moduleLocator<LoginRepository>()),
+          create: (BuildContext context) => moduleLocator<GetProfileBloc>(),
         ),
       ],
       child: MainApp(

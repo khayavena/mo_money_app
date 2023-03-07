@@ -1,7 +1,10 @@
+import 'package:injectable/injectable.dart';
+
 import '../../../local_delegate/share_preferences/preferences_json_req_delegate.dart';
 import '../model/user.dart';
 import 'login_service.dart';
 
+@Injectable(as: LoginService)
 class LoginServiceImpl implements LoginService {
   final PreferencesReqDelegate reqDelegate;
 

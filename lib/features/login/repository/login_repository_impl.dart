@@ -1,8 +1,11 @@
+import 'package:injectable/injectable.dart';
+
 import '../../../local_delegate/share_preferences/preferences_delegate_general_exception.dart';
 import '../data_source/login_service.dart';
 import '../model/user.dart';
 import 'login_repository.dart';
 
+@Injectable(as: LoginRepository)
 class LoginRepositoryImpl implements LoginRepository {
   final LoginService loginService;
 

@@ -1,10 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:mo_money_app/features/comon/result_status.dart';
 
 import '../repository/login_repository.dart';
 import 'get_profile_event.dart';
 import 'get_profile_state.dart';
 
+@Injectable()
 class GetProfileBloc extends Bloc<GetProfileEvent, GetProfileState> {
   final LoginRepository repository;
 

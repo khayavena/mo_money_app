@@ -2,11 +2,13 @@ library http_delegate;
 
 import 'dart:convert';
 
+import 'package:injectable/injectable.dart';
 import 'package:mo_money_app/http_delegate/base_json_mapper.dart';
 import 'package:mo_money_app/local_delegate/share_preferences/preferences_delegate_general_exception.dart';
 import 'package:mo_money_app/local_delegate/share_preferences/preferences_json_req_delegate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+@Injectable(as: PreferencesReqDelegate)
 class PreferencesReqDelegateImpl implements PreferencesReqDelegate {
   final SharedPreferences preferences;
 

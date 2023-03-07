@@ -1,10 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:mo_money_app/features/comon/result_status.dart';
 
 import '../repository/message_repository.dart';
 import 'get_messages_event.dart';
 import 'get_messages_state.dart';
-
+@Injectable()
 class GetMessagesBloc extends Bloc<GetMessagesEvent, GetMessagesState> {
   final MessageRepository repository;
 
