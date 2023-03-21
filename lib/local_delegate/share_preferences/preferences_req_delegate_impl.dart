@@ -60,7 +60,7 @@ class PreferencesReqDelegateImpl implements PreferencesReqDelegate {
 
   @override
   Future<bool> deleteKey(String key) async {
-    final isSet = await preferences.remove(key);
-    return isSet;
+    final isRemoved = await preferences.remove(key);
+    return isRemoved;
   }
 }

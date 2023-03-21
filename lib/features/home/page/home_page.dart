@@ -27,8 +27,6 @@ class HomePageState extends State {
           floatHeaderSlivers: true,
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             // This redirects the amount of the overlap to the injector
-
-
               SliverAppBar(
                 automaticallyImplyLeading: false,
                 backgroundColor: Colors.transparent,
@@ -75,4 +73,5 @@ class HomePageState extends State {
       ),
     );
   }
+
 }

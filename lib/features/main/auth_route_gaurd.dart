@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:mo_money_app/features/login/repository/login_repository.dart';
 import 'package:mo_money_app/features/main/router.gr.dart';
+
 class AuthenticatedRouteGuard extends AutoRouteGuard {
   final LoginRepository loginRepository;
 
@@ -13,8 +14,11 @@ class AuthenticatedRouteGuard extends AutoRouteGuard {
     } else {
       router.push(
         LoginRoute(
-          onLoginState: (success) {
-            resolver.next(success);
+          onLoginState: (bool success) async {
+            if (success) {
+              resolver.next(success);
+              router.popTop();
+            }
           },
         ),
       );

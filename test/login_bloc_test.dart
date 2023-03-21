@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mo_money_app/features/login/bloc/get_login_bloc.dart';
 import 'package:mo_money_app/features/login/bloc/get_login_event.dart';
 import 'package:mo_money_app/features/login/bloc/get_login_state.dart';
+import 'package:mo_money_app/features/login/model/user.dart';
 import 'package:mo_money_app/features/login/repository/login_repository.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -29,10 +30,11 @@ void main() {
     blocTest<GetLoginBloc, GetLoginState>(
       'test  emit login success',
       setUp: () {
-        when(loginRepository.registerUser(any)).thenAnswer((_) async => true);
-        when(loginRepository.getCurrentUser()).thenAnswer((_) async => null);
+        when(loginRepository.registerUser(any)).thenAnswer((_) async => false);
+        when(loginRepository.getCurrentUser()).thenAnswer((_) async =>
+            User().copyWith(username: "khayavena", password: "password"));
       },
-      build: () => MockGetLoginBloc(),
+      build: () => mockGetLoginBloc,
       act: (bloc) {
         bloc.add(GetLoginEvent("khayavena", "password"));
       },

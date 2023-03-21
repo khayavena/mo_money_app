@@ -6,6 +6,8 @@ part 'transaction.g.dart';
 
 @JsonSerializable()
 class Transaction extends BaseJsonMapper<Transaction> {
+  @JsonKey(name: "_id")
+  late String id;
   late String name;
   late String description;
   late String icon;

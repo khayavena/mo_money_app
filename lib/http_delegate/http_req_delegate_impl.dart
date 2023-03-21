@@ -1,12 +1,14 @@
 library http_delegate;
 
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 
 import 'base_json_mapper.dart';
 import 'http_delegate_exception.dart';
 import 'http_delegate_general_exception.dart';
 import 'http_req_delegate.dart';
 
+@Injectable(as: HttpReqDelegate)
 class HttpReqDelegateImpl implements HttpReqDelegate {
   late final Dio client;
 

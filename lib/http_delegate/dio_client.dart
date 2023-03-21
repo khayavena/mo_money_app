@@ -3,16 +3,13 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 
 class DioClient {
-  final Dio dio = Dio();
-
-  Dio getInstance(
+  static Dio getInstance(
       {required String baseUrl,
-      bool debugMode = false,
+      bool debugMode = true,
       required List<Interceptor> interceptors}) {
-    return dio
-      ..options = BaseOptions(
-        baseUrl: baseUrl,
-      )
+    return Dio(BaseOptions(
+      baseUrl: baseUrl,
+    ))
       ..interceptors.addAll(interceptors)
       ..interceptors.add(
         LogInterceptor(

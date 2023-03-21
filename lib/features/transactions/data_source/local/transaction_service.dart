@@ -1,4 +1,4 @@
-import '../model/transaction.dart';
+import '../../model/transaction.dart';
 
 abstract class TransactionsService {
   Future<List<Transaction>> getTransactions();
