@@ -6,6 +6,8 @@ part 'message.g.dart';
 
 @JsonSerializable()
 class Message extends BaseJsonMapper<Message> {
+  @JsonKey(name: "_id")
+  late String id;
   late String date;
   late String message;
 
