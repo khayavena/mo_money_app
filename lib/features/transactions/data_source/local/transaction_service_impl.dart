@@ -3,6 +3,7 @@ import 'package:mo_money_app/features/transactions/data_source/local/transaction
 
 import '../../../../local_delegate/asset/asset_json_req_delegate.dart';
 import '../../model/transaction.dart';
+
 @Injectable(as: TransactionsService)
 class TransactionsServiceImpl implements TransactionsService {
   static const transactionSource = 'assets/data/transactions.json';
@@ -12,8 +13,12 @@ class TransactionsServiceImpl implements TransactionsService {
 
   @override
   Future<List<Transaction>> getTransactions() async {
-    final posts =
-        reqDelegate.getList<Transaction>(transactionSource, Transaction());
-    return posts;
+    try {
+      final response = await reqDelegate.get(transactionSource);
+      return List<Transaction>.from(
+          response.map((element) => Transaction().fromJson(element)));
+    } catch (e) {
+      rethrow;
+    }
   }
 }

@@ -1,11 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../../http_delegate/base_json_mapper.dart';
-
 part 'message.g.dart';
 
 @JsonSerializable()
-class Message extends BaseJsonMapper<Message> {
+class Message {
   @JsonKey(name: "_id")
   late String id;
   late String date;
@@ -13,15 +11,11 @@ class Message extends BaseJsonMapper<Message> {
 
   Message();
 
-  @override
-  Message create() => Message();
 
-  @override
-  Message fromJson(Map<String, dynamic> json) {
-    final value = _$MessageFromJson(json);
-    return value;
-  }
 
-  @override
+  Message fromJson(Map<String, dynamic> json) => _$MessageFromJson(json);
+
+
+
   Map<String, dynamic> toJson() => _$MessageToJson(this);
 }

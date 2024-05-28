@@ -32,7 +32,7 @@ void main() {
       setUp: () {
         when(loginRepository.registerUser(any)).thenAnswer((_) async => false);
         when(loginRepository.getCurrentUser()).thenAnswer((_) async =>
-            User().copyWith(username: "khayavena", password: "password"));
+            User.copyWith(username: "khayavena", password: "password"));
       },
       build: () => mockGetLoginBloc,
       act: (bloc) {

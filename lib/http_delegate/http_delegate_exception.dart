@@ -3,22 +3,22 @@ import 'package:dio/dio.dart';
 class HttpDelegateException extends Error {
   late String message;
 
-  HttpDelegateException(DioError error) {
+  HttpDelegateException(DioException error) {
     _process(error);
   }
 
-  void _process(DioError error) {
+  void _process(DioException error) {
     switch (error.type) {
-      case DioErrorType.connectionTimeout:
+      case DioExceptionType.connectionTimeout:
         message = 'Connection timeout try again';
         break;
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         message = 'Timeout could not send request';
         break;
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         message = 'Timeout could not receive data';
         break;
-      case DioErrorType.badResponse:
+      case DioExceptionType.badResponse:
         switch (error.response?.statusCode) {
           case 500:
             message = 'Internal Server Error';
@@ -31,11 +31,17 @@ class HttpDelegateException extends Error {
             break;
         }
         break;
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         message = 'Canceled Request';
         break;
-      case DioErrorType.unknown:
+      case DioExceptionType.unknown:
         message = 'Something went wrong';
+        break;
+      case DioExceptionType.badCertificate:
+        // TODO: Handle this case.
+        break;
+      case DioExceptionType.connectionError:
+        // TODO: Handle this case.
         break;
     }
   }

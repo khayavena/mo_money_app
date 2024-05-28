@@ -11,7 +11,7 @@ Transaction _$TransactionFromJson(Map<String, dynamic> json) => Transaction()
   ..name = json['name'] as String
   ..description = json['description'] as String
   ..icon = json['icon'] as String
-  ..amount = json['amount'] as int;
+  ..amount = (json['amount'] as num).toInt();
 
 Map<String, dynamic> _$TransactionToJson(Transaction instance) =>
     <String, dynamic>{

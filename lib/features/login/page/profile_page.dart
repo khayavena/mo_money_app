@@ -12,7 +12,7 @@ import '../bloc/get_profile_event.dart';
 import '../bloc/get_profile_state.dart';
 import '../widget/profile_logout_widget.dart';
 import '../widget/profile_widget_widget.dart';
-
+@RoutePage()
 class ProfilePage extends StatefulWidget {
   const ProfilePage({
     Key? key,
@@ -43,7 +43,7 @@ class _ProfilePageState extends State<ProfilePage> {
         body: BlocConsumer<GetProfileBloc, GetProfileState>(
             listener: (context, state) async {
           if (state.isLogout) {
-            await AutoRouter.of(context).popAndPush(const HomeRoute());
+            await AutoRouter.of(context).popAndPush(const HomePage());
           }
         }, builder: (context, state) {
           if (state.status == ResultStatus.init) {

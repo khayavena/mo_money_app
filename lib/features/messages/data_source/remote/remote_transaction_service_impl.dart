@@ -10,7 +10,13 @@ class RemoteMessagesServiceImpl extends RemoteMessagesService {
   RemoteMessagesServiceImpl({required this.httpReqDelegate});
 
   @override
-  Future<List<Message>> getMessages() {
-    return httpReqDelegate.getList("/messages", Message());
+  Future<List<Message>> getMessages() async {
+    try {
+      dynamic response = await httpReqDelegate.get("/messages");
+      return List<Message>.from(
+          response.map((element) => Message().fromJson(element)));
+    } catch (e) {
+      rethrow;
+    }
   }
 }

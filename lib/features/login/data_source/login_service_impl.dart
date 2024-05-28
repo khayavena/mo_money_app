@@ -11,8 +11,9 @@ class LoginServiceImpl implements LoginService {
   LoginServiceImpl({required this.reqDelegate});
 
   @override
-  Future<User> getCurrentUser() {
-    return reqDelegate.getJsonObject<User>("current_user", User());
+  Future<User> getCurrentUser() async {
+    final result = await reqDelegate.getJsonObject("current_user");
+    return User().fromJson(result);
   }
 
   @override

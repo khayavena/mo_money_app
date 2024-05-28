@@ -1,11 +1,10 @@
-import '../../http_delegate/base_json_mapper.dart';
 
 abstract class PreferencesReqDelegate {
-  getJsonObject<T extends BaseJsonMapper>(String key, T refType);
 
-  Future<bool> setJsonObject<T extends BaseJsonMapper>(String key, T object);
 
-  Future<List<T>> getJsonList<T extends BaseJsonMapper>(String key, T refType);
+  Future<bool> setJsonObject(String key, dynamic object);
+
+  Future<dynamic> getJsonObject(String key);
 
   bool getBoolean(String key);
 

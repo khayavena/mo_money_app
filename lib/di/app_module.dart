@@ -8,8 +8,9 @@ import '../env/env_config.dart';
 @module
 abstract class AppModule {
   @preResolve
-  Future<SharedPreferences> get sharedPreferences =>
-      SharedPreferences.getInstance();
+  Future<SharedPreferences> get sharedPreferences async {
+    return SharedPreferences.getInstance();
+  }
 
   @lazySingleton
   Dio get getDio =>

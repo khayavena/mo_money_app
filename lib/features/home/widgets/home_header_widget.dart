@@ -8,10 +8,10 @@ class HomeHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         Expanded(
             child: BigTextWidget(text: "Wallet", color: secondaryColorDark)),
         SizedBox(height: 4),

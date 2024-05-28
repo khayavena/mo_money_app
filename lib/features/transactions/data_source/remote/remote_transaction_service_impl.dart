@@ -11,7 +11,13 @@ class RemoteTransactionsServiceImpl extends RemoteTransactionsService {
   RemoteTransactionsServiceImpl({required this.httpReqDelegate});
 
   @override
-  Future<List<Transaction>> getTransactions() {
-    return httpReqDelegate.getList("/transactions", Transaction());
+  Future<List<Transaction>> getTransactions() async {
+    try {
+      final response = await httpReqDelegate.get("/transactions");
+      return List<Transaction>.from(
+          response.map((element) => Transaction().fromJson(element)));
+    } catch (e) {
+      rethrow;
+    }
   }
 }

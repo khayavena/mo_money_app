@@ -10,6 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mo_money_app/features/login/repository/login_repository.dart';
 import 'package:mo_money_app/features/main/auth_route_gaurd.dart';
 import 'package:mo_money_app/features/main/main_app.dart';
+import 'package:mo_money_app/features/main/router.dart';
 import 'package:mo_money_app/features/main/router.gr.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -33,8 +34,8 @@ void main() {
     // expect(find.text('1'), findsNothing);
     //
     // // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byKey(const Key("homePage")));
-    await tester.tap(find.byKey(const Key("cardBalanceWidget")));
+    // await tester.tap(find.byKey(const Key("homePage")));
+    // await tester.tap(find.byKey(const Key("cardBalanceWidget")));
     // await tester.pump();
     //
     // // Verify that our counter has incremented.

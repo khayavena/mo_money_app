@@ -83,7 +83,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             SvgPicture.asset(
-              "assets/login/momentam.svg",
+              "assets/login/money_icon.svg",
               width: 164,
               height: 164,
             ),

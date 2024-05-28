@@ -8,7 +8,7 @@ import '../../transactions/page/transactions_page.dart';
 import '../widgets/card_balance_widget.dart';
 import '../widgets/home_header_widget.dart';
 import '../widgets/home_page_navigation_widget.dart';
-
+@RoutePage()
 class HomePage extends StatefulWidget {
   const HomePage({Key? key = const Key("homePage")}) : super(key: key);
 
@@ -48,7 +48,7 @@ class HomePageState extends State {
                 const SizedBox(height: 20),
                 InkWell(
                     onTap: () {
-                      AutoRouter.of(context).push(const CardDetailRoute());
+                      AutoRouter.of(context).push(const CardDetailPage());
                     },
                     child: CardBalanceWidget(
                       number: AppHelper.generateAmount(),
@@ -65,7 +65,7 @@ class HomePageState extends State {
                             fontWeight: FontWeight.w500)),
                   ),
                 ),
-                const Expanded(child: TransactionListPage(title: "homePage")),
+                const Expanded(child: TransactionListPage()),
               ],
             );
           }),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mo_money_app/features/main/router.dart';
 import 'package:mo_money_app/features/main/router.gr.dart';
 
 import 'app_theme.dart';
@@ -6,7 +7,7 @@ import 'app_theme.dart';
 class MainApp extends StatelessWidget {
   final AppRouter router;
 
-  const MainApp({Key? key, required this.router}) : super(key: key);
+  const MainApp({super.key, required this.router});
 
   // This widget is the root of your application.
   @override

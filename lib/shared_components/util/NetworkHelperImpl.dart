@@ -1,5 +1,6 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:injectable/injectable.dart';
+import 'package:mo_money_app/env/env_config.dart';
 
 import 'NetworkHelper.dart';
 
@@ -7,15 +8,11 @@ import 'NetworkHelper.dart';
 class NetworkHelperImpl implements NetworkHelper {
   @override
   Future<bool> isNetworkConnected() async {
+    return EnvConfig.live;
     var connectivityResult = await (Connectivity().checkConnectivity());
     return connectivityResult == ConnectivityResult.wifi ||
         connectivityResult == ConnectivityResult.wifi;
 
-    // if (connectivityResult == ConnectivityResult.mobile) {
-    //   return true;
-    // } else if (connectivityResult == ConnectivityResult.wifi) {
-    //   return true;
-    // }
-    // return false;
+
   }
 }

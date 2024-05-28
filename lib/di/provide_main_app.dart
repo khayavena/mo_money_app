@@ -7,6 +7,7 @@ import '../features/login/bloc/get_profile_bloc.dart';
 import '../features/login/repository/login_repository.dart';
 import '../features/main/auth_route_gaurd.dart';
 import '../features/main/main_app.dart';
+import '../features/main/router.dart';
 import '../features/main/router.gr.dart';
 import '../features/transactions/bloc/get_transactions_bloc.dart';
 import 'module_locator.dart';

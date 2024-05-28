@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:ffi';
 
 class EnvConfig {
   static const String defaultUrl =
@@ -11,4 +12,5 @@ class EnvConfig {
   }
 
   static const apiKey = String.fromEnvironment('API_KEY', defaultValue: '');
+  static const live = bool.fromEnvironment('LIVE', defaultValue: true);
 }

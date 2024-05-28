@@ -16,7 +16,7 @@ class HomeNavigationWidget extends StatelessWidget {
           InkWell(
             child: buildProfileAction(),
             onTap: () async {
-              AutoRouter.of(context).push(const ProfileRoute());
+              AutoRouter.of(context).push(const ProfilePage());
             },
           ),
           const SizedBox(
@@ -25,7 +25,7 @@ class HomeNavigationWidget extends StatelessWidget {
           InkWell(
             child: buildNotificationAction(),
             onTap: () async {
-              AutoRouter.of(context).push(MessageListRoute(title: "Messages"));
+              AutoRouter.of(context).push(MessageListPage(title: "Messages"));
             },
           )
         ]);

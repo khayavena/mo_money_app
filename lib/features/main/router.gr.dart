@@ -1,54 +1,42 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// AutoRouterGenerator
 // **************************************************************************
-//
+
 // ignore_for_file: type=lint
+// coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:flutter/material.dart' as _i7;
+import 'package:mo_money_app/features/home/page/home_page.dart' as _i2;
+import 'package:mo_money_app/features/login/page/login_page.dart' as _i3;
+import 'package:mo_money_app/features/login/page/profile_page.dart' as _i5;
+import 'package:mo_money_app/features/messages/page/messages_page.dart' as _i4;
+import 'package:mo_money_app/features/transactions/page/card_detail_page.dart'
+    as _i1;
 
-import '../home/page/home_page.dart' as _i1;
-import '../login/page/login_page.dart' as _i3;
-import '../login/page/profile_page.dart' as _i2;
-import '../messages/page/messages_page.dart' as _i5;
-import '../transactions/page/card_detail_page.dart' as _i4;
-import 'auth_route_gaurd.dart' as _i8;
-
-class AppRouter extends _i6.RootStackRouter {
-  AppRouter({
-    _i7.GlobalKey<_i7.NavigatorState>? navigatorKey,
-    required this.authenticatedRouteGuard,
-  }) : super(navigatorKey);
-
-  final _i8.AuthenticatedRouteGuard authenticatedRouteGuard;
+abstract class $AppRouter extends _i6.RootStackRouter {
+  $AppRouter({super.navigatorKey});
 
   @override
   final Map<String, _i6.PageFactory> pagesMap = {
-    HomeRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+    CardDetailPage.name: (routeData) {
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.HomePage(),
+        child: const _i1.CardDetailPage(),
       );
     },
-    ProfileRoute.name: (routeData) {
-      return _i6.CustomPage<dynamic>(
+    HomePage.name: (routeData) {
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.ProfilePage(),
-        transitionsBuilder: _i6.TransitionsBuilders.slideBottom,
-        opaque: true,
-        barrierDismissible: false,
+        child: const _i2.HomePage(),
       );
     },
-    LoginRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginRouteArgs>();
-      return _i6.MaterialPageX<dynamic>(
+    LoginPage.name: (routeData) {
+      final args = routeData.argsAs<LoginPageArgs>();
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.LoginPage(
           key: args.key,
@@ -56,100 +44,77 @@ class AppRouter extends _i6.RootStackRouter {
         ),
       );
     },
-    CardDetailRoute.name: (routeData) {
-      return _i6.CustomPage<dynamic>(
+    MessageListPage.name: (routeData) {
+      final args = routeData.argsAs<MessageListPageArgs>();
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.CardDetailPage(),
-        transitionsBuilder: _i6.TransitionsBuilders.slideLeftWithFade,
-        opaque: true,
-        barrierDismissible: false,
-      );
-    },
-    MessageListRoute.name: (routeData) {
-      final args = routeData.argsAs<MessageListRouteArgs>();
-      return _i6.CustomPage<dynamic>(
-        routeData: routeData,
-        child: _i5.MessageListPage(
+        child: _i4.MessageListPage(
           key: args.key,
           title: args.title,
         ),
-        transitionsBuilder: _i6.TransitionsBuilders.slideBottom,
-        opaque: true,
-        barrierDismissible: false,
+      );
+    },
+    ProfilePage.name: (routeData) {
+      return _i6.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i5.ProfilePage(),
       );
     },
   };
-
-  @override
-  List<_i6.RouteConfig> get routes => [
-        _i6.RouteConfig(
-          HomeRoute.name,
-          path: '/',
-          guards: [authenticatedRouteGuard],
-        ),
-        _i6.RouteConfig(
-          ProfileRoute.name,
-          path: '/profile-page',
-        ),
-        _i6.RouteConfig(
-          LoginRoute.name,
-          path: '/login-page',
-        ),
-        _i6.RouteConfig(
-          CardDetailRoute.name,
-          path: '/card-detail-page',
-        ),
-        _i6.RouteConfig(
-          MessageListRoute.name,
-          path: '/message-list-page',
-        ),
-      ];
 }
 
 /// generated route for
-/// [_i1.HomePage]
-class HomeRoute extends _i6.PageRouteInfo<void> {
-  const HomeRoute()
+/// [_i1.CardDetailPage]
+class CardDetailPage extends _i6.PageRouteInfo<void> {
+  const CardDetailPage({List<_i6.PageRouteInfo>? children})
       : super(
-          HomeRoute.name,
-          path: '/',
+          CardDetailPage.name,
+          initialChildren: children,
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'CardDetailPage';
+
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.ProfilePage]
-class ProfileRoute extends _i6.PageRouteInfo<void> {
-  const ProfileRoute()
+/// [_i2.HomePage]
+class HomePage extends _i6.PageRouteInfo<void> {
+  const HomePage({List<_i6.PageRouteInfo>? children})
       : super(
-          ProfileRoute.name,
-          path: '/profile-page',
+          HomePage.name,
+          initialChildren: children,
         );
 
-  static const String name = 'ProfileRoute';
+  static const String name = 'HomePage';
+
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.LoginPage]
-class LoginRoute extends _i6.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({
+class LoginPage extends _i6.PageRouteInfo<LoginPageArgs> {
+  LoginPage({
     _i7.Key? key,
     required dynamic Function(bool) onLoginState,
+    List<_i6.PageRouteInfo>? children,
   }) : super(
-          LoginRoute.name,
-          path: '/login-page',
-          args: LoginRouteArgs(
+          LoginPage.name,
+          args: LoginPageArgs(
             key: key,
             onLoginState: onLoginState,
           ),
+          initialChildren: children,
         );
 
-  static const String name = 'LoginRoute';
+  static const String name = 'LoginPage';
+
+  static const _i6.PageInfo<LoginPageArgs> page =
+      _i6.PageInfo<LoginPageArgs>(name);
 }
 
-class LoginRouteArgs {
-  const LoginRouteArgs({
+class LoginPageArgs {
+  const LoginPageArgs({
     this.key,
     required this.onLoginState,
   });
@@ -160,42 +125,34 @@ class LoginRouteArgs {
 
   @override
   String toString() {
-    return 'LoginRouteArgs{key: $key, onLoginState: $onLoginState}';
+    return 'LoginPageArgs{key: $key, onLoginState: $onLoginState}';
   }
 }
 
 /// generated route for
-/// [_i4.CardDetailPage]
-class CardDetailRoute extends _i6.PageRouteInfo<void> {
-  const CardDetailRoute()
-      : super(
-          CardDetailRoute.name,
-          path: '/card-detail-page',
-        );
-
-  static const String name = 'CardDetailRoute';
-}
-
-/// generated route for
-/// [_i5.MessageListPage]
-class MessageListRoute extends _i6.PageRouteInfo<MessageListRouteArgs> {
-  MessageListRoute({
+/// [_i4.MessageListPage]
+class MessageListPage extends _i6.PageRouteInfo<MessageListPageArgs> {
+  MessageListPage({
     _i7.Key? key,
     required String title,
+    List<_i6.PageRouteInfo>? children,
   }) : super(
-          MessageListRoute.name,
-          path: '/message-list-page',
-          args: MessageListRouteArgs(
+          MessageListPage.name,
+          args: MessageListPageArgs(
             key: key,
             title: title,
           ),
+          initialChildren: children,
         );
 
-  static const String name = 'MessageListRoute';
+  static const String name = 'MessageListPage';
+
+  static const _i6.PageInfo<MessageListPageArgs> page =
+      _i6.PageInfo<MessageListPageArgs>(name);
 }
 
-class MessageListRouteArgs {
-  const MessageListRouteArgs({
+class MessageListPageArgs {
+  const MessageListPageArgs({
     this.key,
     required this.title,
   });
@@ -206,6 +163,20 @@ class MessageListRouteArgs {
 
   @override
   String toString() {
-    return 'MessageListRouteArgs{key: $key, title: $title}';
+    return 'MessageListPageArgs{key: $key, title: $title}';
   }
+}
+
+/// generated route for
+/// [_i5.ProfilePage]
+class ProfilePage extends _i6.PageRouteInfo<void> {
+  const ProfilePage({List<_i6.PageRouteInfo>? children})
+      : super(
+          ProfilePage.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProfilePage';
+
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }

@@ -9,4 +9,4 @@ final moduleLocator = GetIt.instance;
   preferRelativeImports: false, // default
   asExtension: false, // default
 )
-Future<void> configureDependencies()  =>  init(moduleLocator);
+Future<GetIt> configureDependencies()  =>  init(moduleLocator);

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,9 +10,8 @@ import '../bloc/get_transactions_event.dart';
 import '../bloc/get_transactions_state.dart';
 import '../constants/transaction_analytics_events.dart';
 import '../widget/transaction_body_widget.dart';
-
 class TransactionListPage extends StatefulWidget {
-  const TransactionListPage({Key? key, required this.title}) : super(key: key);
+  const TransactionListPage({super.key,  this.title = ""});
 
   final String title;
 

@@ -25,7 +25,7 @@ class GetLoginBloc extends Bloc<GetLoginEvent, GetLoginState> {
     } else {
       if (event.username.isNotEmpty && event.password.isNotEmpty) {
         final user =
-            User().copyWith(username: event.username, password: event.password);
+            User.copyWith(username: event.username, password: event.password);
         final isRegistered = await repository.registerUser(user);
         if (isRegistered) {
           return state.updateWith(

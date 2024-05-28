@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -15,6 +16,7 @@ import '../../login/bloc/get_profile_state.dart';
 import '../constants/transaction_analytics_events.dart';
 import '../widget/card_table_widget.dart';
 
+@RoutePage()
 class CardDetailPage extends StatefulWidget {
   const CardDetailPage({
     Key? key,

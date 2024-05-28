@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,7 +12,7 @@ import '../bloc/get_messages_event.dart';
 import '../bloc/get_messages_state.dart';
 import '../constants/message_analytics_events.dart';
 import '../widget/messages_body_widget.dart';
-
+@RoutePage()
 class MessageListPage extends StatefulWidget {
   const MessageListPage({Key? key, required this.title}) : super(key: key);
 

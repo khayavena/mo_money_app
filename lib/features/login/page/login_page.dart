@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,14 +9,14 @@ import '../bloc/get_login_bloc.dart';
 import '../bloc/get_login_state.dart';
 import '../constants/login_analytics_events.dart';
 import '../widget/login_form_widget.dart';
-
+@RoutePage()
 class LoginPage extends StatefulWidget {
   final Function(bool loggedIn) onLoginState;
 
   const LoginPage({
-    Key? key,
+    super.key,
     required this.onLoginState,
-  }) : super(key: key);
+  });
 
   @override
   State<LoginPage> createState() => _LoginPageState();
