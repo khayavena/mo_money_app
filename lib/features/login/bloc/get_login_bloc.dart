@@ -1,11 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mo_money_app/features/common/result_status.dart';
+import 'package:mo_money_app/features/login/bloc/get_login_event.dart';
+import 'package:mo_money_app/features/login/bloc/get_login_state.dart';
 
 import '../model/user.dart';
 import '../repository/login_repository.dart';
-import 'get_login_event.dart';
-import 'get_login_state.dart';
+
 
 @Injectable()
 class GetLoginBloc extends Bloc<GetLoginEvent, GetLoginState> {

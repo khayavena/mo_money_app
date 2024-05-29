@@ -11,11 +11,9 @@ import 'http_req_delegate.dart';
 
 @Injectable(as: HttpReqDelegate)
 class HttpReqDelegateImpl implements HttpReqDelegate {
-  late final Dio client;
+  final Dio client;
 
-  HttpReqDelegateImpl({required Dio dioClient}) {
-    client = dioClient;
-  }
+  HttpReqDelegateImpl({required this.client});
 
   @override
   Future get(String endPoint, {Map<String, dynamic>? params}) async {
