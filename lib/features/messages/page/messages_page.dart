@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../shared_components/util/cusmtom_colors.dart';
 import '../../../shared_components/widget/button/back_button_widget.dart';
-import '../../comon/result_status.dart';
+import '../../common/result_status.dart';
 import '../bloc/get_messages_bloc.dart';
 import '../bloc/get_messages_event.dart';
 import '../bloc/get_messages_state.dart';
@@ -14,7 +14,7 @@ import '../constants/message_analytics_events.dart';
 import '../widget/messages_body_widget.dart';
 @RoutePage()
 class MessageListPage extends StatefulWidget {
-  const MessageListPage({Key? key, required this.title}) : super(key: key);
+  const MessageListPage({super.key, required this.title});
 
   final String title;
 

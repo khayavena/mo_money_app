@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mo_money_app/features/comon/result_status.dart';
+import 'package:mo_money_app/features/common/result_status.dart';
 import 'package:mo_money_app/shared_components/widget/loader/app_loading_widget.dart';
 
 import '../../../shared_components/util/cusmtom_colors.dart';
@@ -15,8 +15,8 @@ import '../widget/profile_widget_widget.dart';
 @RoutePage()
 class ProfilePage extends StatefulWidget {
   const ProfilePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();

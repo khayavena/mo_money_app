@@ -3,7 +3,7 @@ import 'package:mo_money_app/features/transactions/widget/transaction_list_view_
 
 import '../../../shared_components/widget/loader/app_loading_widget.dart';
 import '../../../shared_components/widget/screen/failure_widget.dart';
-import '../../comon/result_status.dart';
+import '../../common/result_status.dart';
 import '../bloc/get_transactions_state.dart';
 
 class TransactionBodyWidget extends StatelessWidget {

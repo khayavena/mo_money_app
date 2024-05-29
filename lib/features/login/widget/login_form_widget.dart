@@ -13,8 +13,7 @@ class LoginFormWidget extends StatefulWidget {
   final GetLoginState state;
 
   const LoginFormWidget(
-      {Key? key = const Key("loginFormWidget"), required this.state})
-      : super(key: key);
+      {super.key = const Key("loginFormWidget"), required this.state});
 
   @override
   State<StatefulWidget> createState() => _LoginFormWidgetState();
@@ -82,19 +81,22 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: [
-            SvgPicture.asset(
-              "assets/login/money_icon.svg",
-              width: 164,
-              height: 164,
-            ),
-            const SizedBox(height: 25),
             const Text(
-              "Welcome back!",
+              "Mo Money",
+              style: TextStyle(
+                  fontSize: 34,
+                  color: secondaryColorDark,
+                  letterSpacing: 0.01,
+                  fontWeight: FontWeight.w700),
+            ),
+            const SizedBox(height: 30),
+            const Text(
+              "Welcome to money app",
               style: TextStyle(
                   fontSize: 24,
                   color: secondaryColorDark,
                   letterSpacing: 0.01,
-                  fontWeight: FontWeight.w600),
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 48),
             _buildForm(),

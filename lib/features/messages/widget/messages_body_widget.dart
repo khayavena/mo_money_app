@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../shared_components/widget/loader/app_loading_widget.dart';
 import '../../../shared_components/widget/screen/failure_widget.dart';
-import '../../comon/result_status.dart';
+import '../../common/result_status.dart';
 import '../bloc/get_messages_state.dart';
 import 'message_list_view_widget.dart';
 

@@ -4,7 +4,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../comon/result_status.dart';
+import '../../common/result_status.dart';
 import '../bloc/get_login_bloc.dart';
 import '../bloc/get_login_state.dart';
 import '../constants/login_analytics_events.dart';

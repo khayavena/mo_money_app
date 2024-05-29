@@ -1,4 +1,4 @@
-import 'package:mo_money_app/features/comon/result_status.dart';
+import 'package:mo_money_app/features/common/result_status.dart';
 
 import '../model/message.dart';
 

@@ -9,7 +9,7 @@ import 'package:mo_money_app/shared_components/widget/loader/app_loading_widget.
 
 import '../../../shared_components/widget/button/BigTextWidget.dart';
 import '../../../shared_components/widget/button/back_button_widget.dart';
-import '../../comon/result_status.dart';
+import '../../common/result_status.dart';
 import '../../login/bloc/get_profile_bloc.dart';
 import '../../login/bloc/get_profile_event.dart';
 import '../../login/bloc/get_profile_state.dart';
