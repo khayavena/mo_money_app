@@ -10,7 +10,7 @@ import '../widgets/home_header_widget.dart';
 import '../widgets/home_page_navigation_widget.dart';
 @RoutePage()
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key = const Key("homePage")}) : super(key: key);
+  const HomePage({super.key = const Key("homePage")});
 
   @override
   HomePageState createState() => HomePageState();

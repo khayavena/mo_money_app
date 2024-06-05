@@ -1,17 +1,17 @@
 import 'dart:developer';
 
 import 'package:auto_route/annotations.dart';
+import 'package:common/result_status.dart';
+import 'package:common/shared_components/util/cusmtom_colors.dart';
+import 'package:common/shared_components/widget/button/BigTextWidget.dart';
+import 'package:common/shared_components/widget/button/back_button_widget.dart';
+import 'package:common/shared_components/widget/loader/app_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mo_money_app/shared_components/util/cusmtom_colors.dart';
-import 'package:mo_money_app/shared_components/widget/loader/app_loading_widget.dart';
+import 'package:transactions/bloc/get_card_detail_bloc.dart';
+import 'package:transactions/bloc/get_detail_state.dart';
 
-import '../../../shared_components/widget/button/BigTextWidget.dart';
-import '../../../shared_components/widget/button/back_button_widget.dart';
-import '../../common/result_status.dart';
-import '../../login/bloc/get_profile_bloc.dart';
-import '../../login/bloc/get_profile_event.dart';
-import '../../login/bloc/get_profile_state.dart';
+import '../bloc/get_card_detail_event.dart';
 import '../constants/transaction_analytics_events.dart';
 import '../widget/card_detail_widget.dart';
 import '../widget/card_table_widget.dart';
@@ -30,7 +30,7 @@ class _CardDetailPageState extends State<CardDetailPage> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      context.read<GetProfileBloc>().add(GetUserProfileEvent());
+      context.read<GetCardDetailBloc>().add(GetCardDetailEvent());
     });
     super.initState();
   }
@@ -44,7 +44,7 @@ class _CardDetailPageState extends State<CardDetailPage> {
         bottomOpacity: 0.0,
         elevation: 0.0,
       ),
-      body: BlocConsumer<GetProfileBloc, GetProfileState>(
+      body: BlocConsumer<GetCardDetailBloc, GetCardDetailState>(
           listener: (context, state) {
         switch (state.status) {
           case ResultStatus.init:
@@ -67,7 +67,7 @@ class _CardDetailPageState extends State<CardDetailPage> {
             const SizedBox(height: 50),
             const CardDetailWidget(),
             const SizedBox(height: 50),
-            CardTableWidget(name: state.user?.username),
+            CardTableWidget(cardDetail: state.cardDetail,),
           ],
         );
       }),

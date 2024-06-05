@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mo_money_app/features/main/router.dart';
-import 'package:mo_money_app/features/main/router.gr.dart';
 
 import 'app_theme.dart';
 
